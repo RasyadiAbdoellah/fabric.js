@@ -4222,7 +4222,7 @@ fabric.CommonMethods = {
    * @param {Function} handler
    */
   fabric.util.addListener = function(element, eventName, handler, options) {
-    element && element.addEventListener(eventName, handler, couldUseAttachEvent ? false : options);
+    element && element.addEventListener(eventName, handler, options);
   };
 
   /**
@@ -4234,7 +4234,7 @@ fabric.CommonMethods = {
    * @param {Function} handler
    */
   fabric.util.removeListener = function(element, eventName, handler, options) {
-    element && element.removeEventListener(eventName, handler, couldUseAttachEvent ? false : options);
+    element && element.removeEventListener(eventName, handler, options);
   };
 
   function getTouchInfo(event) {
